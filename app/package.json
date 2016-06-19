@@ -1,0 +1,27 @@
+{
+  "name": "react-tutorial",
+  "version": "0.0.0",
+  "private": true,
+  "license": "see LICENSE file",
+  "description": "Code from the React tutorial.",
+  "devDependencies": {
+      "react":"*",
+      "babel" :"*",
+      "webpack":"*",
+      "react-dom":"*",
+      "babel-core" :"*",
+      "babel-loader" :"*",
+      "babel-preset-react":"*",
+      "webpack-dev-server":"*",
+      "babel-preset-es2015":"*" 
+  },
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "keywords": [
+    "react",
+    "tutorial",
+    "comment",
+    "example"
+  ]
+}

@@ -1,10 +1,26 @@
-node:
-  image: bitnami/node
-  command: "sh -c 'npm install && npm start'"
-  ports:
-    - "3000:3000"
-  
-  volumes:
-    - .:/app
-  extra_hosts:
-    - "node:127.0.0.1"
+﻿version: '2'
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: docker.nginx
+    image: nginx:1.9.5
+    ports:
+      - "8080:8080"
+    volumes:
+      - wwwroot:/wwwroot
+  webpack:
+    build:
+      context: .
+      dockerfile: docker.webpack
+    image: my-webpack
+    container_name: my-webpack-container
+    ports:
+      - "35729:35729"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - wwwroot:/wwwroot
+volumes:
+  wwwroot:
+    driver: local
