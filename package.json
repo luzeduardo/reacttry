@@ -1,35 +1,27 @@
 {
-  "name": "react-tutorial",
+  "name": "react",
   "version": "0.0.0",
   "private": true,
   "license": "see LICENSE file",
   "description": "Code from the React tutorial.",
-  "main": "server.js",
-  "dependencies": {
-    "body-parser": "^1.4.3",
-    "express": "^4.4.5"
+  "devDependencies": {
+      "react":"*",
+      "babel" :"*",
+      "webpack":"*",
+      "react-dom":"*",
+      "babel-core" :"*",
+      "babel-loader" :"*",
+      "babel-preset-react":"*",
+      "webpack-dev-server":"*",
+      "babel-preset-es2015":"*" 
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/reactjs/react-tutorial.git"
+    "start": "webpack-dev-server"
   },
   "keywords": [
     "react",
     "tutorial",
     "comment",
     "example"
-  ],
-  "author": "petehunt",
-  "bugs": {
-    "url": "https://github.com/reactjs/react-tutorial/issues"
-  },
-  "homepage": "https://github.com/reactjs/react-tutorial",
-  "engines" : {
-    "node" : "0.12.x"
-  }
+  ]
 }
