@@ -14,7 +14,7 @@ services:
       context: .
       dockerfile: docker.webpack
     image: my-webpack
-    container_name: my-webpack-container
+    container_name: 19d09646487e
     ports:
       - "35729:35729"
     volumes:
@@ -22,5 +22,5 @@ services:
       - /app/node_modules
       - wwwroot:/wwwroot
 volumes:
-  wwwroot:
-    driver: local
+ wwwroot:
+   driver: local
