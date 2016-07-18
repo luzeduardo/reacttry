@@ -12,8 +12,9 @@ RUN curl -L https://npmjs.org/install.sh | sh
 RUN npm cache clean
 RUN npm install webpack -g
 RUN npm install --save webpack-dev-server -g
+RUN npm install --save webpack-validator
 RUN npm install
-CMD webpack --watch --watch-polling
+CMD webpack-dev-server --watch --watch-polling --host 0.0.0.0 --port 3333
 
 EXPOSE 3333
 EXPOSE 8080
