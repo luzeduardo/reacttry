@@ -5,7 +5,7 @@ module.exports = {
 		"./app/main.js"
 	],
 	output: {
-		path: "./app",
+		path: "./app/app",
 		filename: "index.js"
 	},
 	devServer: {
