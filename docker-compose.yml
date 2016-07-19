@@ -18,7 +18,10 @@ services:
     ports:
       - "35729:35729"
     volumes:
-      - .:/app      
+      - .:/app
+      - /app/node_modules     
 volumes:
  wwwroot:
    driver: local
+
+#http://dapperdeveloper.com/2016/05/18/developing-with-docker-and-webpack/   
