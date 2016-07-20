@@ -1,8 +1,8 @@
 module.exports = {
-	devtool: 'source-map',
+	// devtool: 'source-map',
 	entry: [
-		"webpack-dev-server/client?http://devapp:3333",
-        "webpack/hot/only-dev-server",
+		'webpack-dev-server/client?http://' + require("os").hostname() + ':3333/',
+        // "webpack/hot/only-dev-server",
 		"./app/main.js"
 	],
 	output: {
@@ -13,6 +13,7 @@ module.exports = {
 	devServer: {
 		inline: true,
 		contentBase: './app',
+		colors: true,
 		port: 3333
 	},
 	module: {
