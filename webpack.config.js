@@ -1,4 +1,5 @@
 module.exports = {
+	devtool: 'source-map',
 	entry: [
 		"webpack-dev-server/client?http://devapp:3333",
         "webpack/hot/only-dev-server",
@@ -6,7 +7,8 @@ module.exports = {
 	],
 	output: {
 		path: "./app/app",
-		filename: "index.js"
+		publicPath: "./app/app",
+		filename: "bundle.js"
 	},
 	devServer: {
 		inline: true,
