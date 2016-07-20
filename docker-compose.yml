@@ -8,7 +8,7 @@ services:
     ports:
       - "8075:8075"
     volumes:
-      - wwwroot:/wwwroot
+      - ./app:/app/app
   webpack:
     build:
       context: .
@@ -20,9 +20,9 @@ services:
     volumes:
       - .:/app
       - /app/node_modules     
-      - wwwroot:/wwwroot
-volumes:
- wwwroot:
-   driver: local
+      - ./app:/app/app
+#volumes:
+# wwwroot:
+#   driver: local
 
 #http://dapperdeveloper.com/2016/05/18/developing-with-docker-and-webpack/   
