@@ -1,18 +1,18 @@
 ﻿version: '2'
 services:
   nginx:
-    build:
-      context: .
-      dockerfile: docker.nginx
+    # build:
+    #   context: .
+    #   dockerfile: docker.nginx
     image: nginx:1.9.5
     ports:
       - "8075:8075"
     volumes:
       - ./app:/app/app
   webpack:
-    build:
-      context: .
-      dockerfile: docker.webpack
+    # build:
+    #   context: .
+    #   dockerfile: docker.webpack
     image: my-webpack
     container_name: my-webpack-container
     ports:
