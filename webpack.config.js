@@ -1,31 +1,36 @@
+// Webpack config file
+var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+
 module.exports = {
-	// devtool: 'source-map',
-	entry: [
-		'webpack-dev-server/client?http://' + require("os").hostname() + ':3333/',
-        // "webpack/hot/only-dev-server",
-		"./app/main.js"
-	],
-	output: {
-		path: "./app/app",
-		publicPath: "./app/app",
-		filename: "bundle.js"
-	},
-	devServer: {
-		inline: true,
-		contentBase: './app',
-		colors: true,
-		port: 3333
-	},
-	module: {
-		loaders: [
-			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				loader: 'babel',
-				query: {
-					presets: ['es2015', 'react']	
-				}
-			}			
-		]
-	}
-}
+  devtool: "source-map",
+  entry: './assets/js/components/Index.jsx',
+  output: {
+    path: __dirname + '/assets/js',
+    filename: 'bundle.js'
+  },
+  module: {
+    preLoaders: [
+      {
+        test: /\.jsx$|\.js$/,
+        loader: 'eslint-loader',
+        include: __dirname + '/assets',
+        exclude: /bundle\.js$/
+      }
+    ],
+    loaders: [
+      {
+        test: /\.jsx$|\.js$/,        
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query: {
+          presets: ['es2015', 'react']  
+        }
+      }
+    ]
+  },
+  plugins: [
+    new BrowserSyncPlugin({
+      proxy: 'localhost:8000'
+    })
+  ]
+};

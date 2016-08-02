@@ -44,3 +44,5 @@ examples
 .index.js
 doc
 index.js
+assets/js/bundle.js
+assets/js/bundle.js.map
