@@ -4,7 +4,7 @@ import { Main } from './Main.jsx';
 import { Cvv } from './Cvv.jsx';
 import { NewCard } from './NewCard.jsx';
 
-export class LookoutIndex extends React.Component {
+export class LooIndex extends React.Component {
   
   render() {
     return (
