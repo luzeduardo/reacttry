@@ -35,7 +35,10 @@
     "babel-eslint": "6.1.2",
     "babel-loader": "^6.2.0",
     "browser-sync": "^2.10.1",
-    "browser-sync-webpack-plugin": "^1.0.1",    
+    "browser-sync-webpack-plugin": "^1.0.1",
+    "eslint": "2.10.2",    
+    "eslint-loader": "^1.1.1",
+    "eslint-plugin-react": "5.2.2",  
     "webpack": "^1.12.9"
   }
 }

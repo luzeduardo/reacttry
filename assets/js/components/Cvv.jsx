@@ -1,5 +1,4 @@
 import React from 'react';
-import { Hint } from './Hint.jsx';
 
 export class Cvv extends React.Component {
 	render() {
