@@ -7,8 +7,7 @@ export class Cvv extends React.Component {
 				<form>
 			      <div className='form-group'>
 			        <label>CVV</label>
-			        <input type='password' className='error' maxLength='4' name='cvv' />
-			        <Hint />
+			        <input type='password' className='error' maxLength='4' name='cvv' />			        
 			        <span className='error'>error</span>
 			      </div>
 
