@@ -1,4 +1,4 @@
-FROM node:argon
+FROM node:5-slim
 
 RUN apt-get update && apt-get -y --no-install-recommends install \
     ca-certificates \
@@ -12,17 +12,12 @@ RUN curl -o /usr/local/bin/gosu -SL "https://github.com/tianon/gosu/releases/dow
     && chmod +x /usr/local/bin/gosu
 
 RUN npm install webpack -g
-RUN npm install -g browser-sync
-RUN npm install --save-dev webpack-dev-server
-RUN npm install --save-dev babel-register
+RUN npm install --save-dev hapi browser-sync-webpack-plugin dateformat inert vision hapi-react-views react react-dom flux babel-register browser-sync-webpack-plugin browser-sync babel-preset-es2015 babel-loader babel-preset-react
 
-# App
 WORKDIR /usr/src/app
-ADD . /usr/src/app
-RUN npm install -g
+COPY . /usr/src/app/
 
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
 # Expose the app port
