@@ -12,12 +12,13 @@ RUN curl -o /usr/local/bin/gosu -SL "https://github.com/tianon/gosu/releases/dow
     && chmod +x /usr/local/bin/gosu
 
 RUN npm install webpack -g
+RUN npm install webpack-dev-server -g
 RUN npm install --save-dev hapi browser-sync-webpack-plugin dateformat inert vision hapi-react-views react react-dom flux babel-register browser-sync-webpack-plugin browser-sync babel-preset-es2015 babel-loader babel-preset-react
 
 WORKDIR /usr/src/app
-COPY . /usr/src/app/
 
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
 EXPOSE 8000
+EXPOSE 3000
