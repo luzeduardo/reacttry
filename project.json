@@ -1,0 +1,44 @@
+{
+  "name": "loo",
+  "version": "0.0.1",
+  "description": "React and Flux credit card app",
+  "main": "server.js",
+  "dependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.3.13",
+    "babel-register": "^6.3.13",
+    "dateformat": "^1.0.12",
+    "flux": "^2.1.1",
+    "hapi": "^13.x.x",
+    "hapi-react-views": "^9.1.0",
+    "inert": "^4.0.1",
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "superagent": "^2.1.0",
+    "vision": "^4.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "webpack -p --progress --colors",
+    "dev": "webpack --progress --colors --watch & nodemon",
+    "lint": "eslint --ignore-pattern **/bundle*.js --ext .js,.jsx assets/**"
+  },
+  "author": "eduardo",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "http://loo.local",
+  "devDependencies": {
+    "babel-core": "^6.3.26",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.0",
+    "browser-sync": "^2.10.1",
+    "browser-sync-webpack-plugin": "^1.0.1",
+    "eslint": "^2.10.2",    
+    "eslint-loader": "^1.1.1",
+    "eslint-plugin-react": "^5.2.2",  
+    "webpack": "^1.12.9"
+  }
+}
