@@ -1,4 +1,4 @@
-FROM node:5-slim
+FROM node:4
 
 RUN apt-get update && apt-get -y --no-install-recommends install \
     ca-certificates \

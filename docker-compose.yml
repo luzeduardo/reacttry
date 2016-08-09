@@ -1,13 +1,11 @@
 ﻿version: '2'
 services:
   webpack:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: webpack-react
+    build: .    
+    image: node:4
     container_name: webpack-react-container
     ports:
       - "8000:8000"      
       - "3001:3001"
     volumes:
-      - .:/usr/src/app     
+      - .:/usr/src/app
