@@ -1,26 +1,13 @@
 ﻿version: '2'
 services:
-  nginx:
-    # build:
-    #   context: .
-    #   dockerfile: docker.nginx
-    image: nginx:1.9.5
-    ports:
-      - "8075:8075"
-    volumes:
-      - ./app:/app/app
   webpack:
     build:
       context: .
-      dockerfile: docker.webpack
-    image: my-webpack
-    container_name: my-webpack-container
+      dockerfile: Dockerfile
+    image: webpack-react
+    container_name: webpack-react-container
     ports:
-      - "35729:35729"
+      - "8000:8000"      
+      - "3001:3001"
     volumes:
-      - .:/app
-      - /app/node_modules     
-      - ./app:/app/app
-#volumes:
-# wwwroot:
-#   driver: local
+      - .:/usr/src/app     
