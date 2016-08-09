@@ -13,7 +13,7 @@ RUN curl -o /usr/local/bin/gosu -SL "https://github.com/tianon/gosu/releases/dow
 
 RUN npm install webpack -g
 RUN npm install webpack-dev-server -g
-RUN npm install --save-dev hapi browser-sync-webpack-plugin dateformat inert vision hapi-react-views react react-dom flux babel-register browser-sync-webpack-plugin browser-sync babel-preset-es2015 babel-loader babel-preset-react
+#RUN npm install hapi browser-sync-webpack-plugin dateformat inert vision hapi-react-views react react-dom flux #babel-register browser-sync-webpack-plugin browser-sync babel-preset-es2015 babel-loader babel-preset-react #nodemon
 
 WORKDIR /usr/src/app
 
