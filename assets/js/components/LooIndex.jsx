@@ -12,7 +12,7 @@ export class LooIndex extends React.Component {
         <Header />
         <Main />
         <Cvv />
-        <NewCard />
+        {/*<NewCard />*/}
       </div>
     );
   }
