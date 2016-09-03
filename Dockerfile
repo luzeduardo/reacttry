@@ -1,4 +1,4 @@
-FROM node:4
+FROM node:4.5.0
 
 RUN apt-get update && apt-get -y --no-install-recommends install \
     ca-certificates \
@@ -15,9 +15,6 @@ RUN npm install webpack -g
 RUN npm install webpack-dev-server -g
 
 WORKDIR /usr/src/app
-
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
 EXPOSE 8000
 EXPOSE 3000
