@@ -7,6 +7,3 @@ export HOME=/home/user
 npm install
 npm run dev
 #npm run build && npm start
-#bash
-
-#docker run -it -p 8000:8000 -v `pwd`:/usr/src/app -v `pwd`/entrypoint.sh:/usr/local/bin/entrypoint.sh -e LOCAL_USER_ID=`id -u $USER` --name node-container node-container
